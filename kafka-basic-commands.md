@@ -8,7 +8,7 @@ Basic commands
 
 `bin/kafka-server-start.sh config/server.properties`
 
-## CRIAR TOPIC
+## CRIAR TOPICO
 
 `bin/kafka-topics.sh 
 --bootstrap-server localhost:9092 
@@ -17,7 +17,7 @@ Basic commands
 --partitions 3 
 --topic test`
 
-## CRIAR TOPICS
+## LISTAR TOPICOS
 
 `bin/kafka-topics.sh 
 --bootstrap-server localhost:9092 
