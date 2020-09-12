@@ -46,7 +46,7 @@ Basic commands
 
 `bin/kafka-console-consumer.sh 
 --bootstrap-server localhost:9092 
---topic test \
+--topic test 
 --from-beginning`
 
 ## CRIAR UM CONSUMER COM CONSUMER GROUP ESPECÍFICO
