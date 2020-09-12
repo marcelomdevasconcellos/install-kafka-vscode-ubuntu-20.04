@@ -1,60 +1,71 @@
 Basic commands
 
-# INICIAR ZOOKEEPER
-bin/zookeeper-server-start.sh config/zookeeper.properties
+## INICIAR ZOOKEEPER
 
-# INICIAR KAFKA BROKER
-bin/kafka-server-start.sh config/server.properties
+`bin/zookeeper-server-start.sh config/zookeeper.properties`
 
-# CRIAR TOPIC
-bin/kafka-topics.sh \
+## INICIAR KAFKA BROKER
+
+`bin/kafka-server-start.sh config/server.properties`
+
+## CRIAR TOPIC
+
+`bin/kafka-topics.sh \
 --bootstrap-server localhost:9092 \
 --create \
 --replication-factor 1 \
 --partitions 3 \
---topic test
+--topic test`
 
-# CRIAR TOPICS
-bin/kafka-topics.sh \
+## CRIAR TOPICS
+
+`bin/kafka-topics.sh \
 --bootstrap-server localhost:9092 \
---list
+--list`
 
-# DETALHES DE TOPIC
-bin/kafka-topics.sh \
+## DETALHES DE TOPIC
+
+`bin/kafka-topics.sh \
 --bootstrap-server localhost:9092 \
 --describe \
---topic test
+--topic test`
 
-# CRIAR UM PRODUCER
-bin/kafka-console-producer.sh \
+## CRIAR UM PRODUCER
+
+`bin/kafka-console-producer.sh \
 --broker-list localhost:9092 \
---topic test
+--topic test`
 
-# CRIAR UM CONSUMER
-bin/kafka-console-consumer.sh \
+## CRIAR UM CONSUMER
+
+`bin/kafka-console-consumer.sh \
 --bootstrap-server localhost:9092 \
---topic test
+--topic test`
 
-# CRIAR UM CONSUMER E LER MENSAGENS DO INÍCIO
-bin/kafka-console-consumer.sh \
+## CRIAR UM CONSUMER E LER MENSAGENS DO INÍCIO
+
+`bin/kafka-console-consumer.sh \
 --bootstrap-server localhost:9092 \
 --topic test \
---from-beginning
+--from-beginning`
 
-# CRIAR UM CONSUMER COM CONSUMER GROUP ESPECÍFICO
-bin/kafka-console-consumer.sh \
+## CRIAR UM CONSUMER COM CONSUMER GROUP ESPECÍFICO
+
+`bin/kafka-console-consumer.sh \
 --bootstrap-server localhost:9092 \
 --topic test \
 --group test \
---from-beginning
+--from-beginning`
 
-# LISTAR CONSUMER GROUPS
-bin/kafka-consumer-groups.sh \
+## LISTAR CONSUMER GROUPS
+
+`bin/kafka-consumer-groups.sh \
 --bootstrap-server localhost:9092 \
---list
+--list`
 
-# DETALHAR CONSUMER GROUP
-bin/kafka-consumer-groups.sh \
+## DETALHAR CONSUMER GROUP
+
+`bin/kafka-consumer-groups.sh \
 --bootstrap-server localhost:9092 \
 --group test \
---describe
+--describe`
