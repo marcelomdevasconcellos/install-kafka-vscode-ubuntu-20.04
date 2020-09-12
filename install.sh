@@ -12,10 +12,10 @@ tar -xvzf ~/Downloads/kafka.tgz --strip 1
 sudo apt-get update -y
 sudo apt-get install openjdk-8-jdk -y
 
-sudo apt install python3-pip
+sudo apt install python3-pip -y
 pip3 install kafka-python
 
 pip3 install Faker
 
 sudo apt install mongodb -y
-pip3 install pymongoy
+pip3 install pymongo
